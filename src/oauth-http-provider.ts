@@ -2,8 +2,7 @@ import { Log, User, UserManager, UserManagerSettings } from 'oidc-client';
 import 'xhr2';
 import { Dialog } from './dialog';
 
-import HttpProvider from 'web3-providers-http';
-import { JsonRPCRequest, JsonRPCResponse } from 'web3-providers-http';
+import { HttpProvider, JsonRPCRequest, JsonRPCResponse } from 'web3';
 
 export enum OAuthProviderIntegrationType {
   IFRAME,

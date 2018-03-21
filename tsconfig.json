@@ -13,5 +13,5 @@
     "node_modules"
   ],
   "typeRoots" : ["./typings"],
-  "types": ["web3-providers-http"]
+  "types": ["web3"]
 }

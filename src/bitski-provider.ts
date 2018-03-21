@@ -1,6 +1,5 @@
 import { User } from 'oidc-client';
-import Web3 from 'web3';
-import { JsonRPCRequest, JsonRPCResponse } from 'web3-providers-http';
+import { JsonRPCRequest, JsonRPCResponse, Web3 } from 'web3';
 import { BitskiProviderSettings } from './bitski-provider-settings';
 import { Dialog } from './dialog';
 import { OAuthHttpProvider, OAuthProviderIntegrationType } from './oauth-http-provider';
