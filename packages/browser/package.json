@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/BitskiCo/bitski-js"
   },
-  "version": "0.10.8",
+  "version": "0.10.9",
   "scripts": {
     "test": "jest",
     "version": "node ./scripts/version.js && git add --all",
