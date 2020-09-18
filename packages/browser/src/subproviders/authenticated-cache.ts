@@ -1,4 +1,4 @@
-import { Subprovider } from '@bitski/provider-engine';
+import Web3ProviderEngine, { Subprovider } from '@bitski/provider-engine';
 import { AuthProvider } from '../auth/auth-provider';
 import { CACHED_METHODS } from '../constants';
 
@@ -9,10 +9,13 @@ export class AuthenticatedCacheSubprovider extends Subprovider {
     private authProvider: AuthProvider;
     private cachedValues: Map<string, any>;
 
-    constructor(authProvider: AuthProvider) {
+    constructor(authProvider: AuthProvider, engine?: Web3ProviderEngine) {
         super();
         this.authProvider = authProvider;
         this.cachedValues = new Map<string, any>();
+	if (engine) {
+	  engine.on('signOut', () => this.cachedValues.clear());
+	}
     }
 
     public handleRequest(payload, next, end) {

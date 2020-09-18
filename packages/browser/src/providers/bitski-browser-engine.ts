@@ -88,7 +88,7 @@ export class BitskiBrowserEngine extends BitskiEngine {
 
     // Respond to some requests via userinfo object if available
     if (isAuthProvider(this.tokenProvider)) {
-      const cacheSubprovider = new AuthenticatedCacheSubprovider(this.tokenProvider);
+      const cacheSubprovider = new AuthenticatedCacheSubprovider(this.tokenProvider, this);
       this.addProvider(cacheSubprovider);
     }
 

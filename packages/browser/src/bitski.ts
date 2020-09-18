@@ -236,7 +236,7 @@ export class Bitski {
    * Sign the current user out of your application.
    */
   public signOut(): Promise<void> {
-    this.engines.forEach((engine) => engine.stop());
+    this.engines.forEach((engine) => engine.emit('signOut'));
     return this.authProvider.signOut();
   }
 

@@ -139,17 +139,6 @@ describe('managing providers', () => {
     expect(bitski.engines.size).toBe(1);
   });
 
-  test('should stop all engines when signing out', () => {
-    const bitski = createInstance();
-    const provider = bitski.getProvider('kovan');
-    provider.on('error', (error) => {});
-    // @ts-ignore
-    expect(provider.isRunning()).toBe(true);
-    bitski.signOut();
-    // @ts-ignore
-    expect(provider.isRunning()).toBe(false);
-  });
-
   test('should not stop engine when force logged out', () => {
     expect.assertions(2);
     const bitski = createInstance();
